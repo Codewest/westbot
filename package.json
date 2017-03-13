@@ -4,9 +4,11 @@
   "author": "Michiel Leyman <michiel.leyman@gmail.com>",
   "description": "Le bot",
   "scripts": {
-    "start": "./bin/westbot --adapter slack"
+    "start": "cross-env NODE_ENV=production ./bin/westbot --adapter slack",
+    "dev": "cross-env NODE_ENV=development ./bin/westbot"
   },
   "dependencies": {
+    "cross-env": "^3.2.3",
     "hubot": "^2.19.0",
     "hubot-auth": "^2.1.0",
     "hubot-diagnostics": "0.0.1",
